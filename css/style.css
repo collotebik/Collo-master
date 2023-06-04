@@ -1,0 +1,463 @@
+/*
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: red dashed 1px;
+    
+    
+}
+
+body{
+    background-color: rgb(250, 250, 250);
+    align-items: center;
+}
+
+.heading{
+    text-align: center;
+    font-size: 35px;
+    padding: 15px 0px;
+    color: rgb(78, 78, 78);
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));/*repeat each card, automatically calculate each width, for each card, min width is 240px and max will be automatically calculated.*/
+   /*grid-gap: 15px; /*apply 15px around the cards on each side*/
+   /* padding: 25px;
+   
+}
+.card-container .card{
+    padding: 10px;
+    border: 2px solid rgb(148, 148, 148);
+    border-radius: 6px;
+    text-align: center;
+    background-color: aliceblue;
+    box-shadow: 5px 5px rgb(38, 194, 59);
+}
+.card-container .card .card-icon{
+    margin-top: 10px;
+}
+
+.card-container .card .card-icon span{
+    margin: 10px 0px;/* apply margin of 10px on y-axis and 0px on x-axis*/
+   /* font-size: 32px;
+    color: rgb(7, 151, 151);
+}
+
+.card-container .card .card-title{
+    font-size: 22px;
+    color: rgb(82, 82, 82);
+}
+.card-container .card p{
+    font-size: 15px;
+    color: rgb(114, 98, 98);
+    padding: 10px;
+}
+.card-container .card a{
+    color: rgb(58, 58, 58);
+    text-decoration: none;/*removes underline on sentence*/
+    /*display: block;/*makes anchor occupy the wholle row width*/
+   /* font-size: 18px;
+    padding: 10px 0px;
+
+}
+.card-container .card a:hover{
+    color: rgb(72, 139, 136);
+}
+.header2{
+    text-align: center;
+}
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+body{
+  background-color: #cacaca;
+  scroll-snap-type: y mandatory;
+
+}
+.home{
+  /*background-image: url("wave-haikei.png");*/
+  background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            padding: 10px 20px;
+}
+.services{
+    background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            padding: 10px 20px;
+}
+
+.container5 {
+  height: 100vh;
+ 
+}
+.prg{
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.page {
+ height: 100vh auto;
+  
+ 
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+
+.heading{
+    text-align: center;
+    font-size: 30px;
+    padding: 15px 0px;
+    color: rgb(56, 56, 56);
+    cursor: default;
+    font-family: Arial, Helvetica, sans-serif;;
+}
+
+.navbar {
+  background-color: #333333;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: medium;
+  position: sticky;
+  top: 0;
+}
+
+.navbar .logo a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  margin-left: 20px;
+}
+
+.navbar .nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 3px;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.container{
+  text-align: center;
+  position: relative;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 0fr));/*repeat each card, automatically calculate each width, for each card, min width is 240px and max will be automatically calculated.*/
+    grid-gap: 30px; /*apply 15px around the cards on each side*/
+    
+    
+}
+
+  .card {
+    width: 190px;
+    height: 360px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    padding-bottom: 2rem;
+    margin-left: 5px;
+  
+   }
+   
+   .card-details {
+    color: black;
+    height: 100%;
+    display: grid;
+    place-content: center;
+   }
+   
+   .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #008bf8;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.1s ease-out;
+    cursor: pointer;
+   }
+   
+   .text-body {
+    color: rgb(77, 77, 77);
+   }
+   
+  
+   /*Text*/
+   .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: #008bf8;
+    box-shadow: 0 9px 180px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 90%);
+    opacity: 1;
+   }
+ 
+  .contact_card{
+    text-align: center;
+    position: relative;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 0fr));/*repeat each card, automatically calculate each width, for each card, min width is 240px and max will be automatically calculated.*/
+
+    
+  }
+  .contact {
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    width: 100px;
+    height: 200px;
+    position: relative;
+
+    
+  }
+  
+  .card2 {
+    width: 150px;
+    height: 200px;
+    background: #FAF1F6;
+    padding: 2rem 1.5rem;
+    transition: box-shadow .3s ease, transform .2s ease;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+  
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-avatar {
+    background: radial-gradient(#A8A6B6,#b4b4b4,#BDBBC7,#C5C4CE,#000094);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform .2s ease;
+  }
+  
+  .card-avatar svg {
+    padding-top: 5px;
+    height: 80px;
+    width: 100px;
+    fill: #000000;
+  }
+  
+  .card-social {
+    display: flex;
+    justify-content: space-around;
+    width: 190px;
+    margin-top: 10%;
+    text-align: center;
+  }
+  
+  .card-social-icon {
+    list-style: none;
+    color: #515F65;
+    font-size: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-social-icon svg {
+    display: block;
+    height: 20px;
+    width: 20px;
+    fill: #515F65;
+    cursor: pointer;
+  }
+  
+  .card-title {
+    color: #1b1b1b;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 2rem;
+    margin-top: 5px;
+  }
+  
+  .card-subtitle {
+    color: #7e93a0;
+    font-size: 1.0em;
+  }
+  
+  .address-icon {
+    fill: #515F65;
+    height: 130px;
+    width: 80px;
+    list-style: none;
+    justify-content: space-around;
+  }
+  
+  .address-title {
+    color: #333;
+    font-size: 1.0em;
+    font-weight: 600;
+    list-style: none;
+  }
+  
+  .address {
+    color: #4e4e4e;
+    font-size: 1em;
+    list-style: none;
+    padding-left: 20px;
+    ;
+  }
+  
+  .contact-title {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 45%;
+    padding-bottom: 5px;
+  }
+  
+  .card-contact {
+    color: #505050;
+    font-size: 1em;
+  }
+  
+  .icon-contact {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-contact svg {
+    display: block;
+    height: 18px;
+    width: 20px;
+    fill: #000000;
+    padding-right: 5px;
+  }
+  
+  .card2:hover {
+    box-shadow: 0 10px 50px #23232333;
+  }
+  
+  .card2:hover .card-info {
+    transform: translateY(-5%);
+  }
+  
+  .card-avatar:hover {
+    transform: scale(1.1);
+  }
+  
+  #cs1:hover {
+    transform: scale(2.0);
+  }
+  
+  #cs2:hover {
+    transform: scale(2.0);
+  }
+  
+  #cs3:hover {
+    transform: scale(2.0);
+  }
+  
+  .contact:hover #c1 {
+    transform: translateX(0px);
+  }
+  
+  .contact:hover #c2 {
+    transition: 0.8s;
+    transform: translateX(200px);
+  }
+  
+  .contact:hover #c3 {    transition: 0.4s;
+
+    transform: translateX(-200px);
+  }
+
+  @media  screen and (min-width:767px) and (max-width:1023px) {
+  }
+  @media screen and (min-width:1024px){
+    
+  }
+  @media screen and (min-width:767px) {
+    
+  }
+  .footer {text-align: center; max-width: 720px; width: 90%; margin: 45px auto; font-family: Menlo, Consolas, DejaVu Sans Mono, monospace, sans-serif;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
